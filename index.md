@@ -12,3 +12,5 @@ layout: page
 {{ post.date | date: "%B %d, %Y" }}
 
 {{ content }}
+
+{% include JB/comments %}
