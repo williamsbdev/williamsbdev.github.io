@@ -7,9 +7,15 @@ layout: index
   <h1>{{ post.title }} {% if post.tagline %}<small>{{post.tagline}}</small>{% endif %}</h1>
 </div>
 
-
-{{ post.date | date: "%B %d, %Y" }}
-
-{{ post.content }}
+<div class="row-fluid post-full">
+  <div class="span12">
+    <div class="date">
+      <span>{{ post.date | date_to_long_string }}</span>
+    </div>
+    <div class="content">
+      {{ post.content }}
+    </div>
+  </div>
+</div>
 
 {% include JB/comments %}
