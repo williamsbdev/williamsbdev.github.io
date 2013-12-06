@@ -4,7 +4,6 @@ category : agile development
 tagline: "Agile Development Practices"
 tags : [agile, pairing, learning, TDD, deployment]
 ---
-{% include JB/setup %}
 
 I have been a software developer for three and half years now. For the last 13
 months, I have had the privilege of being at a shop where we practice 100%
