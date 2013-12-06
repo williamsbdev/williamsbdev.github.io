@@ -1,16 +1,15 @@
 ---
-layout: page
+layout: index
 ---
-{% include JB/setup %}
+{% assign post = site.posts.first %}
 
-{% assign post = site.posts.first %} {% assign content = post.content %}
+<div class="page-header">
+  <h1>{{ post.title }} {% if post.tagline %}<small>{{post.tagline}}</small>{% endif %}</h1>
+</div>
 
-<h2>{{ post.title }}</h2>
-
-<h5>{{ post.tagline }}</h5>
 
 {{ post.date | date: "%B %d, %Y" }}
 
-{{ content }}
+{{ post.content }}
 
 {% include JB/comments %}
