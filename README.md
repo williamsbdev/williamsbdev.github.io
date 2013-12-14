@@ -10,5 +10,5 @@ command to spin up the site locally at localhost:4000:
 
     jekyll serve
 
-Please visit the [jekyll](http://jekyllrb.com/) site for more information about
+Please visit [jekyll](http://jekyllrb.com/) for more information about
 how it works.
