@@ -26,10 +26,10 @@ App.Person = DS.Model.extend
 {% endhighlight %}
 
 In my Handlebars template I wanted to display the number of people for a given
-shift (please imagine double {} as jekyll attempts to interpret the contents):
+shift:
 
 {% highlight HTML %}
-  {shift.name}{shift.number_of_people}
+  {{ "{{shift.name"}}}} - {{ "{{shift.number_of_people"}}}}
 {% endhighlight %}
 
 On my shift I thought I would add the computed property of number_of_people.
@@ -110,10 +110,10 @@ more complicated than they need to be). I threw a bunch of spaghetti at the
 wall and none of it was working. I was stuck. So I threw a question on
 [StackOverflow](http://www.stackoverflow.com). The person answering asked me
 why I was trying to get the length of the array in a computed property. Instead
-to try this (again imagine double {} for the Handlebars below):
+to try this:
 
 {% highlight HTML %}
-  {shift.name}{shift.people.length}
+  {{ "{{shift.name"}}}} - {{ "{{shift.people.length"}}}}
 {% endhighlight %}
 
 In the Handlebars, Ember knows that the people property is a promise and will
