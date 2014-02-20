@@ -12,10 +12,11 @@ imposter syndrome like so many developers do (great podcast by Ruby Rogues on th
 [imposter syndrome](http://rubyrogues.com/107-rr-impostor-syndrome-with-tim-chevalier/)
 issue).
 
-However, we were using the build tool [Grunt](http://gruntjs.com/) at work to
+We were using the build tool [Grunt](http://gruntjs.com/) at work to
 compile our front-end code. I am a huge [CoffeeScript](http://coffeescript.org/)
-fanboy so I wanted to be able to write our Gruntfile in CoffeeScript. I could
-that but my coworker told me about modularizing your Gruntfile with the
+fanboy so I wanted to be able to write our Gruntfile in CoffeeScript. I could write
+my Gruntfile in CoffeeScript however the our Gruntfiles were getting large and to solve
+that problem, my coworker told me about modularizing your Gruntfile with the
 [load-grunt-config](https://github.com/firstandthird/load-grunt-config) module.
 As I was playing with this module at home I noticed that it only supported js
 and yaml files at the time. I thought, "Why don't they support CoffeeScript? I
@@ -28,8 +29,8 @@ code and a sample file. Here is my
 As you can see, I did almost nothing for this project except make myself and
 all subsequent CoffeeScript enthusiasts happy. All I am trying to say is that
 you can contribute to open source. It does not need to be a complete fix of the
-issue on a project that has been going on for three years with posts on the
+issue on a project that has been going on for three years with 117 posts on the
 thread. It can be as simple as starting out with a spelling error in a README.
 Fork the project, fix the spelling mistake and submit a pull request.
 [Github](http://github.com) makes it super easy and once you submit your first
-pull request, Open Source Software will not be so big and scary.
+pull request, the world Open Source Software will not be so big and scary.
