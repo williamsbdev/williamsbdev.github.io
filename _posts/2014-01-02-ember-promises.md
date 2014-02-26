@@ -54,7 +54,7 @@ console:
   Assertion failed: You looked up the 'people' relationship on
   '<App.Shift:ember277:1>' but some of the associated records were not
   loaded. Either make sure they are all loaded together with the parent record,
-  or specify that the relationship is async (`DS.hasMany({ async: true })`)
+  or specify that the relationship is async ('DS.hasMany({ async: true })')
 {% endhighlight %}
 
 This was awesome. My first error in Ember and it gave me a helpful error
