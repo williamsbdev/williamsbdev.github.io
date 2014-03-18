@@ -15,7 +15,7 @@ issue).
 We were using the build tool [Grunt](http://gruntjs.com/) at work to
 compile our front-end code. I am a huge [CoffeeScript](http://coffeescript.org/)
 fanboy so I wanted to be able to write our Gruntfile in CoffeeScript. I could write
-my Gruntfile in CoffeeScript however the our Gruntfiles were getting large and to solve
+my Gruntfile in CoffeeScript however our Gruntfiles were getting large and to solve
 that problem, my coworker told me about modularizing your Gruntfile with the
 [load-grunt-config](https://github.com/firstandthird/load-grunt-config) module.
 As I was playing with this module at home I noticed that it only supported js
