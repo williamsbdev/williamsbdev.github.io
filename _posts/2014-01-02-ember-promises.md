@@ -2,7 +2,7 @@
 layout: post
 category : ember
 tagline: "A first impression"
-tags : [ember, promises, coffee]
+tags : [ember, promises, coffeescript]
 ---
 
 I am working on an [Ember](emberjs.com) application outside of work to gain a
