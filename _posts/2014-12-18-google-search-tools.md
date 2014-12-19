@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Google Chrome Search Tips and Tricks"
+title: "Google/Chrome Tips and Tricks"
 tags: [google]
 ---
 
