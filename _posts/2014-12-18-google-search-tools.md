@@ -47,9 +47,9 @@ browsers or search engines. Let's start with some tricks to avoid using the mous
 
   `<cmd> + T (Mac)`
 
-One more tick that I actually just learned today was the search tools within
-Chrome. After searching, you have the ability to click the "Search tools"
-button. This will give you the options to results based on results within the
+One more tick that I actually just learned today was the search tools in Google's
+search. After searching, you have the ability to click the "Search tools"
+button. This will give you the option to filter based on results within the
 past hour, 24 hours, week, month, year or custom range. There is also another
 option to search based on visited links, not yet visited, reading level, or
 verbatim. You can also search by location. I have only used the time range so
