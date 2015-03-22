@@ -5,6 +5,12 @@ run the following command:
 
     gem install jekyll
 
+If changes are made to the styling or JavaScript, run the following:
+
+    npm install
+    make changes
+    grunt deploy
+
 Once this has finished installing all the dependencies, run the following
 command to spin up the site locally at localhost:4000:
 
