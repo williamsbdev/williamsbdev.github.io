@@ -3,7 +3,7 @@ layout: post
 title: "Open Source"
 category: oss
 tagline: 'My first Contribution'
-tags: [oss, coffeescript, grunt]
+tags: [oss]
 ---
 
 I have been developing web applications for nearly four years and it was just

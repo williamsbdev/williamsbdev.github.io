@@ -1,5 +1,0 @@
-{% if site.safe and site.JB.analytics.provider and page.JB.analytics != false %}
-
-  {% include JB/analytics-providers/google %}
-
-{% endif %}

@@ -1,30 +1,14 @@
-permalink: /posts/:title 
-
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
+markdown: redcarpet
 pygments: true
-
+permalink: /posts/:title
+rdiscount:
+  extensions: [smart]
 title : Brandon Williams
-tagline: 
+production_url : http://williamsbdev.com
+description: "Ember.js, JavaScript, Vim, Python, Shell"
+disqus_shortname: williamsbgithubio
 author :
   name : Brandon Williams
-  email : williamsbdev@gmail.com
   github : williamsbdev
-  twitter : williamsbdev
-
-production_url : http://williamsbdev.com
-
-JB :
-  version : 0.3.0
-  BASE_PATH : false
-  ASSET_PATH : false
-  posts_path: /posts.html
-  categories_path : /categories.html
-  tags_path : /tags.html
-  atom_path : /atom.xml
-  rss_path : /rss.xml
-  comments :
-    provider : disqus
-    disqus :
-      short_name : williamsbgithubio
-  sharing :
-    provider : false
+  twitter: williamsbdev
+  email: williamsbdev@gmail.com

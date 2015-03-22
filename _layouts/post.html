@@ -1,5 +1,23 @@
 ---
-layout: default
+layout: layout
 ---
-{% include JB/setup %}
-{% include themes/twitter/post.html %}
+
+<article>
+  <h1>
+    <a href="{{ page.url }}">{{ page.title }}</a>
+  </h1>
+
+  <section class="byline">
+    {{ page.date | date: "%B %e, %Y" }}
+  </section>
+  <section class="byline tags_byline">
+    Tags:
+    {% for tag in page.tags %}
+      <a href="/tags/{{tag}}">{{tag}}</a>
+    {% endfor %}
+  </section>
+
+  {{ content }}
+  <div class="pull"></div>
+  {% include disqus.html %}
+</article>

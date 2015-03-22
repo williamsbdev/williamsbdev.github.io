@@ -2,7 +2,7 @@
 layout: post
 category : agile development
 tagline: "Agile Development Practices"
-tags : [agile, pairing, learning, TDD, deployment]
+tags : [pairing]
 ---
 
 I have been a software developer for three and half years now. For the last 13
