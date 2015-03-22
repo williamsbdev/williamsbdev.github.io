@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Google/Chrome Tips and Tricks"
-tags: [google]
+tags: [productivity]
 ---
 
 There are some things that I just take for granted now when doing a

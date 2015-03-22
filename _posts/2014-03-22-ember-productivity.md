@@ -3,7 +3,7 @@ layout: post
 title: "Ember Productivity"
 category: ember
 tagline: "get things done"
-tags: [ember]
+tags: [ember, productivity]
 ---
 
 It was a year ago that we first introduced [Ember.js](http://emberjs.com) into
