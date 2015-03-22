@@ -1,15 +1,15 @@
 ---
 layout: layout
-title: "Pairing"
+title: "Google"
 ---
 
 <div class="container">
   <section class="content">
-    <h1>/tags/pairing</h1>
+    <h1>/tags/google</h1>
     <ul class="listing">
       {% for post in site.posts %}
         {% for tag in post.tags %}
-          {% if tag == "pairing" %}
+          {% if tag == "google" %}
             <li class="li_tags_view">
               <a href="{{ post.url }}">{{ post.title }}</a>
               <span class="post_date_tags_view">{{ post.date | date: "%B %e, %Y" }}</span>
