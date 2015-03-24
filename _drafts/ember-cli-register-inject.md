@@ -5,10 +5,9 @@ tags: [ember, ember-cli]
 ---
 
 I am often concerned with the many design patterns that are considered best
-practices. As I have been developing [Ember.js] applications, I have found that
-certain server side patterns can be found on the front-end as well. As we were
-developing our application, it starts out like all apps do, small. As it grew
-we began to feel pain around the objects that managed our data persistence.
+practices. As my team was developing our current set of applications, they
+start out like all apps do, small. As it grew we began to feel pain around the
+objects (or lack of objects) that managed our data persistence.
 
 What my team has found was that my data persistence layer wants to leak into
 the controller.  A first attempt solution was to put the persistence logic into
