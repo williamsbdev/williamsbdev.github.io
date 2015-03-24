@@ -5,13 +5,10 @@ tags: [ember, ember-cli]
 ---
 
 I am often concerned with the many design patterns that are considered best
-practices. The [single responsibility
-principle](http://en.wikipedia.org/wiki/Single_responsibility_principle) is one
-that can easily be violated. As I work in Ember, I find that when writing my
-tests, it can be easy to just keep the test passing quickly by putting all my
-code in the controller. This a clear violation of the single responsibilty
-principle. The focus of this post will be to extract the data persistence layer
-out and show-off some of the addons to make this easy to do so.
+practices. As I have been developing [Ember.js] applications, I have found that
+certain server side patterns can be found on the front-end as well. As we were
+developing our application, it starts out like all apps do, small. As it grew
+we began to feel pain around the objects that managed our data persistence.
 
 What my team has found was that my data persistence layer wants to leak into
 the controller.  A first attempt solution was to put the persistence logic into
@@ -51,10 +48,9 @@ An idea was a way to programmatically register all the objects (repositories)
 into the application. Since all the repositories were in a single directory
 (the `repositories` directory) we needed to find a way to register all the
 objects in the directory just like ember-cli does. What we came up with was
-[ember-cli-auto-register](https://github.com/williamsbdev/ember-cli-auto-register).
-This helped the situation by cutting out a couple of lines (the
-`application.register` lines) but we still had the problem of all the
-injections.
+[ember-cli-auto-register].  This helped the situation by cutting out a couple
+of lines (the `application.register` lines) but we still had the problem of all
+the injections.
 
 What we really wanted was a way to inject the objects we had registered with
 the application into the routes or controllers directly. We did not want to go
@@ -62,11 +58,9 @@ to an initializer to do so. Ember came out with the `Ember.inject.service` and
 `Ember.inject.controller` API in 1.10 but this was limited only to objects of
 type `Ember.Service` and `Ember.Controller`. Since we had created our own
 repository objects and registered them of type `repositories`, we needed a way
-to inject them. So was born the ember-cli addon
-[ember-cli-injection](https://github.com/williamsbdev/ember-cli-injection).
-With the combination of these two addons, we were able to reduce our
-initializers down to a single file to register all the objects. See the
-improved code below:
+to inject them. So was born the ember-cli addon [ember-cli-injection].  With
+the combination of these two addons, we were able to reduce our initializers
+down to a single file to register all the objects. See the improved code below:
 
 ```javascript
 // app/initializers/repositories.js
@@ -127,4 +121,14 @@ export default PeopleRoute;
 This more explicit approach is something that Ember is trending towards with
 the `Ember.inject` API. It puts the variable declaration right in the class
 where it is used, which will also allow you to quickly see if you have a
-property being injected that is no longer used.
+property being injected that is no longer used. The team enjoys having to only
+setup one initializer for the repositories and being able to quickly see what
+repositories each controller has injected into it. Having the injected
+properties declared where they are used allows us to get more work done as we
+do not have to change files to figure if the object is injected, or inject the
+object if it's not already injected. The tighter feedback loop is our ultimate
+goal when building and testing applications.
+
+[Ember.js]: http://emberjs.com
+[ember-cli-injection]: https://github.com/williamsbdev/ember-cli-injection
+[ember-cli-auto-register]: https://github.com/williamsbdev/ember-cli-auto-register
