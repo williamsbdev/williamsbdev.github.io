@@ -98,7 +98,7 @@ registered into the application. Once we setup the initializer, we could walk
 away and know every new repository was available for us to inject.
 
 Now the injection piece is setup by creating a function that will lookup the
-object in the container with the specified type of object (as we havve seen above
+object in the container with the specified type of object (as we have seen above
 already). We started by creating a utilities function:
 
 ```javascript
