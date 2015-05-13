@@ -19,8 +19,9 @@ mv project/manage.py project/project <project name>
 At this point, I should have a fully functioning app. I am creating an example
 project for myself with [code-camp-api]. After this, I went through and removed
 all the comments that came for free in the scaffolding. After this, I created a
-`requirements.txt` and a `requirements` directory. The `requirements.txt` points to the
-`requirements/production.txt`.
+`requirements.txt` and a `requirements` directory. The directory contains a
+file for each environments dependencies as they may differ. The
+`requirements.txt` points to the `requirements/production.txt`.
 
 After this I created a `settings` directory and moved the `settings.py` file to
 `settings/base.py`. Then I created a `settings/test.py` and a
