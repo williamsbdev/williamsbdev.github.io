@@ -5,8 +5,9 @@ tags: [ember]
 ---
 
 I recently ran into an issue testing `Ember.RSVP.on("error", function(){})`.
-The default `Ember.Test.Adapter.exception` function will fail the test. I was
-handling the error but since the `Ember.Test.Adapter` is also listening to
+The default `Ember.Test.Adapter.exception` function will fail the test. There
+is also an `Ember.Logger.error` being done of the `error.stack`. I was handling
+the error but since the `Ember.Test.Adapter` is also listening to
 `Ember.RSVP.on("error")`, I could not pass the test. I ended up putting all the
 tests that were expecting the `Ember.RSVP.on("error")` to handle the error in
 one module and then did a monkey patch of `Ember.Test.adapter.exception`. See
@@ -41,16 +42,19 @@ import Ember from "ember";
 import {test, module} from "qunit";
 import startApp from "../helpers/start-app";
 
-var application, originalException;
+var application, originalException, originalLoggerError;
 
 module("Acceptance: Foo", {
   beforeEach: function() {
     application = startApp();
     originalException = Ember.Test.adapter.exception;
+    originalLoggerError = Ember.Logger.error;
     Ember.Test.adapter.exception = function(){};
+    Ember.Logger.error = function(){};
   },
   afterEach: function() {
     Ember.Test.adapter.exception = originalException;
+    Ember.Logger.error = originalLoggerError;
     Ember.run(application, "destroy");
   }
 });
