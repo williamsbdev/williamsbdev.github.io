@@ -12,7 +12,7 @@ truly test helper functions, we required the functions exclusively in testing.
 
 If you desire to only have content from your addon accessible in testing, you
 can put all the content into the `test-support/` directory. When the addon is
-included into the main app, it will get put into the `tests/` directory of the
+included into the main app, it will get merged into the `tests/` directory of the
 including app and not included when doing a build other than test.
 
 [Brian Cardarella]: https://github.com/bcardarella
