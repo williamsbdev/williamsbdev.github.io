@@ -35,7 +35,7 @@ At this point, the project is setup and waiting for your first push the repo to
 kick off the first build.
 
 [post]: http://williamsbdev.com/posts/setting-up-django/
-[Github repo]: https://github.com/code-camp-api
+[Github repo]: https://github.com/williamsbdev/code-camp-api
 [project]: https://github.com/code-camp-api
 [travis-ci]: https://travis-ci.org/
 [snap-ci]: https://snap-ci.com/
