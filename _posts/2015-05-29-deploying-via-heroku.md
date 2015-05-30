@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deploying Django with Heroku and Codeship.io"
+title: "Deploy Django project to Heroku via Codeship.io"
 tags: [django]
 ---
 
