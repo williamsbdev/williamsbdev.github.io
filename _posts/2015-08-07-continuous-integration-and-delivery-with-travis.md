@@ -14,7 +14,7 @@ tests going.
 
 To automate the tests every time I commit something, if I am working on a
 private project, I like to use [Codeship.io]. If I am working on a public OSS
-(Open Source Software) project, the defactor seems to be [Travis CI]. Both
+(Open Source Software) project, the de facto seems to be [Travis CI]. Both
 services offer great integration with [Github] and [Bitbucket]. I am currently
 using these two projects ([code-camp-ui] and [code-camp-api]) to learn new
 things and CI/CD is one of those things.
