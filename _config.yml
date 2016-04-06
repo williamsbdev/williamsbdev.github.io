@@ -4,7 +4,7 @@ permalink: /posts/:title
 rdiscount:
   extensions: [smart]
 title : Brandon Williams
-production_url : http://williamsbdev.com
+production_url : https://williamsbdev.com
 description: "Ember.js, JavaScript, Vim, Python, Shell"
 disqus_shortname: williamsbgithubio
 author :
