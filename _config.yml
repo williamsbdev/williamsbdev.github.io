@@ -5,7 +5,7 @@ rdiscount:
   extensions: [smart]
 title : Brandon Williams
 production_url : https://williamsbdev.com
-description: "Ember.js, JavaScript, Vim, Python, Shell"
+description: "Vim, Unix, Python, Ember.js, JavaScript"
 disqus_shortname: williamsbgithubio
 author :
   name : Brandon Williams
