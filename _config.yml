@@ -1,5 +1,5 @@
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+highlighter: null
 permalink: /posts/:title
 rdiscount:
   extensions: [smart]
