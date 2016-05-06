@@ -62,6 +62,7 @@ has confidence in building/maintaining our platform/system.
 [Zookeeper]: https://zookeeper.apache.org/
 [Marathon]: https://mesosphere.github.io/marathon/
 [Docker]: https://www.docker.io
+[Spring Boot]: http://projects.spring.io/spring-boot/
 [Ember.js]: http://emberjs.com
 [VPC]: https://aws.amazon.com/vpc/
 [Jenkins]: https://jenkins.io/
