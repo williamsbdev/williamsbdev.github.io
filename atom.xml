@@ -1,13 +1,10 @@
----
-layout: nil
----
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title type="text" xml:lang="en">JarrodCTaylor</title>
+  <title type="text" xml:lang="en">williamsbdev</title>
   <link type="application/atom+xml" href="https://williamsbdev.com/atom.xml" rel="self"/>
   <link type="text/html" href="https://williamsbdev.com" rel="alternate"/>
   <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <id>http://jarrodctaylor.com/</id>
+  <id>https://williamsbdev.com/</id>
   <author>
     <name>Brandon Williams</name>
     <email>williamsbdev@gmail.com</email>
