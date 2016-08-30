@@ -12,15 +12,24 @@ GATEWAY_TIMEOUT`. It was
 ```java
 package my.custom.package;
 
+import org.apache.http.HttpClientConnection;
+import org.apache.http.HttpException;
+import org.apache.http.HttpRequest;
+import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.protocol.HttpContext;
+import org.apache.http.protocol.HttpRequestExecutor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
+
+import java.io.IOException;
+import java.net.SocketTimeoutException;
 
 @Configuration
 @PropertySource(value = "resttemplate.properties", ignoreResourceNotFound = true)
@@ -35,10 +44,43 @@ public class MyCustomRestTemplateConfiguration {
         PoolingHttpClientConnectionManager manager = new PoolingHttpClientConnectionManager();
         manager.setDefaultMaxPerRoute(defaultMaxPerRoute);
         manager.setMaxTotal(maxTotal);
-        HttpClient client = HttpClient.createMinimal(manager);
-        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(client)
-        requestFactory.setConnectTimeout(5000);
+        HttpClient client = HttpClients.custom()
+                .setConnectionManager(manager)
+                .disableCookieManagement()
+                .setRequestExecutor(new MyCustomHttpRequestExecutor())
+                .build();
+        HttpComponentsClientHttpRequestFactory requestFactory = new HttpComponentsClientHttpRequestFactory(client);
         return new RestTemplate(requestFactory);
+    }
+
+    private class MyCustomHttpRequestExecutor extends HttpRequestExecutor {
+        private final HttpRequestExecutor requestExecutor = new HttpRequestExecutor();
+
+        @Override
+        public HttpResponse execute(
+                final HttpRequest request,
+                final HttpClientConnection conn,
+                final HttpContext context) throws IOException, HttpException {
+            int originalSocketTimeout = conn.getSocketTimeout();
+            try {
+                conn.setSocketTimeout(10);
+                conn.receiveResponseHeader();
+            } catch (SocketTimeoutException e) {
+                // Socket is good to be used
+            } catch (IOException e) {
+                throw new IOException("Socket closed before writing!",
+                        new MyCustomRetryableException("Socket closed before writing!"));
+            } finally {
+                conn.setSocketTimeout(originalSocketTimeout);
+            }
+            return requestExecutor.execute(request, conn, context);
+        }
+    }
+
+    private class MyCustomRetryableException extends Throwable {
+        MyCustomRetryableException(String s) {
+            super(s);
+        }
     }
 }
 ```
