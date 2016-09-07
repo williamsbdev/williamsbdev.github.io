@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Docker with Java and Nginx"
-tags: [devops, java, nginx]
+tags: [devops, docker, java, nginx]
 ---
 
 The platform I work on is built with [Spring Boot] applications, hosted in a
