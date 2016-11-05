@@ -1,0 +1,16 @@
+language: ruby
+rvm:
+  - 2.1.5
+sudo: false
+install: gem install jekyll -v 3.1.2
+script: jekyll build
+deploy:
+  provider: s3
+  access_key_id: $S3_ACCESS_KEY_ID
+  secret_access_key: $S3_SECRET_KEY
+  bucket: williamsbdev.com
+  local_dir: _site
+  region: us-west-2
+  skip_cleanup: true
+  on:
+    repo: williamsbdev/williamsbdev.github.io
