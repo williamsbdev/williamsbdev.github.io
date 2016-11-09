@@ -1,6 +1,7 @@
 markdown: kramdown
 highlighter: null
-permalink: /posts/:title
+permalink:
+  /posts/:title/
 rdiscount:
   extensions: [smart]
 title : Brandon Williams
