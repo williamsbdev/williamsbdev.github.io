@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What to do with Java NoHttpResponseException"
+title: "Custom RestClient"
 tags: [devops, java]
 ---
 
