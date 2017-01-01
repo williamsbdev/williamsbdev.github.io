@@ -33,6 +33,36 @@ export default Ember.Route.extend({
 });
 ```
 
+## Update
+
+I am uncertain of the original version of Ember for the above (previously
+working) examples. As of Ember 2.10.2, I was able to get this working with the
+following modifications.
+
+```javascript
+// app/routes/dimensions/dimension/value.js
+export default Ember.Route.extend({
+  model: function(params, transition) {
+    var dimension_id = transition.params["dimensions.dimension"].dimension_id;
+    // do whatever you need with dimension_id and params.value_id
+  }
+});
+```
+
+I also put together a full [example app]. Run the following:
+
+```
+git clone https://github.com/williamsbdev/ember-nested-route-params.git
+cd ember-nested-route-params
+npm install
+bower install
+ember s
+```
+
+Once all the that is done, navigate to
+http://localhost:4200/dimensions/1/value/1 with the console window open and you
+will get the output that you are seeking.
 
 [StackOverflow question]: http://stackoverflow.com/questions/22376994/ember-deeply-nested-routes-do-not-keep-parent-dynamic-parameter
 [codefox421]: http://stackoverflow.com/users/2085526/codefox421
+[example app]: https://github.com/williamsbdev/ember-nested-route-params
