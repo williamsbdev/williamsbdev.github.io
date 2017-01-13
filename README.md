@@ -1,6 +1,6 @@
 # williamsbdev.com blog
 
-[![Build Status][]](https://travis-ci.org/williamsbdev/williamsbdev.github.io)
+[![Build Status](https://travis-ci.org/williamsbdev/williamsbdev.github.io.png)](https://travis-ci.org/williamsbdev/williamsbdev.github.io)
 
 In order to run the blog locally you will need to have ruby on your machine and
 run the following command:
