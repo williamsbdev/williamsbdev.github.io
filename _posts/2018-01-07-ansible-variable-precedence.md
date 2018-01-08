@@ -270,7 +270,7 @@ if a variable had been defined, and since the role defaults was defining the
 variable it was always true, we would do some certain processing. This behavior
 differs from what we see above with the `include_vars` where the variable is
 not available until after the `include_vars` has been processed. We expected
-the same behavior was expected for the `roles`.
+the same behavior for the `roles`.
 
 ```bash
 ansible-playbook example-10.yml -i hosts
