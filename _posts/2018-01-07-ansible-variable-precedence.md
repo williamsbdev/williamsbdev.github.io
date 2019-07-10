@@ -12,7 +12,7 @@ concrete example of how variable precedence has caused my current team some
 pain. All examples below can be found in this [repo].
 
 We will start with where variables can be set. When we set a variable via the
-command line for the run of the playbook, the variable is availble in the
+command line for the run of the playbook, the variable is available in the
 playbook. This is demonstrated below and code availble via [example 1].
 
 ```bash
